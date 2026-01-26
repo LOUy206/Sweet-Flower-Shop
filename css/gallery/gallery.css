@@ -58,74 +58,6 @@
 }
 
 /* ===================================
-   HEADER
-   =================================== */
-
-.header {
-    background-color: var(--color-background);
-    height: var(--header-height);    
-    max-width: var(--max-width-header);
-    border-bottom: 1px solid var(--color-divider);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: var(--transform-header);
-    z-index: 100;
-}
-.header .phone-header {
-    height: var(--width-full);
-    width: var(--width-full);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.header .logo-lg {
-    display: block;
-}
-.header .logo-sm {
-    display: none;
-}
-.header > .nav > .navlist {
-    height: var(--width-full);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-lg);
-}
-.navlist li {
-    width: 100%;
-}
-.menu-box {
-    height: var(--height-icon);
-    width: var(--height-icon);
-    background-color: transparent;
-    border-radius: var(--radius-xs);
-    border: none;
-    cursor: pointer;
-    display: none;
-}
-.x,
-.menu {
-    height: var(--width-full);
-    width: var(--width-full);
-    border-radius: var(--radius-xs);
-}
-.x {
-    background-color: hsl(0, 0%, 97%);
-    display: none;
-}
-.show-x {
-    display: block;
-}
-.hide-menu {
-    display: none;
-}
-
-
-/* ===================================
    HERO SECTION
    =================================== */
 
@@ -262,50 +194,6 @@ main > .section {
 
 
 /* ===================================
-   FOOTER
-   =================================== */
-
-.footer {
-    max-height: 579px;
-    padding: var(--footer-padding);
-}
-.footer .footer-content {
-    height: 100%;
-    width: 100%;
-    padding: var(--footer-content-padding);
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    background: linear-gradient(to top, hsl(56, 88%, 16%), transparent), url(../../images/gallery/footer/1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-clip: padding-box;
-}
-.footer .footer-content > .footer-info {
-    color: var(--color-text-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-.footer > .footer-content > .footer-info > p {
-    font-size: 117px;
-    font-weight: var(--fw-regular);
-    font-family: 'Caprasimo', sans-serif;
-    line-height: var(--lh-tight);
-    text-align: center;
-    color: var(--color-text-white);
-}
-.footer > .footer-content > .footer-info > div {
-    width: var(--width-full);
-    display: flex;
-    justify-content: space-between;
-}
-.footer > .footer-content > .footer-info > div * {
-    color: var(--color-text-white);
-}
-
-
-/* ===================================
    TABLET
    =================================== */
 
@@ -313,21 +201,6 @@ main > .section {
     :root {
         --body-padding-left: var(--spacing-sm);
         --container-width: var(--container-width-tablet);
-    }
-
-    /* Header */
-    .header {
-        max-width: var(--max-width-header);
-        position: fixed;
-        transform: var(--transform-header);
-    }
-    .navlist {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-lg);
-    }
-    .phone-header {
-        max-width: fit-content;
     }
 
     /* Main */
@@ -375,15 +248,6 @@ main > .section {
     .service img {
         height: 618px;
     }
-    
-    /* Footer */
-    .footer .footer-content {
-        background: linear-gradient(to top, hsl(56, 88%, 16%), transparent), url(../../images/gallery/footer/2.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-clip: padding-box;
-    }
 }
 
 
@@ -396,47 +260,6 @@ main > .section {
         --body-padding-left: var(--spacing-xs);
         --hero-padding-bottom: 56px;
         --container-width: var(--container-width-mobile);
-        --footer-padding-left: var(--spacing-xs);
-        --footer-padding-right: var(--spacing-xs);
-    }
-
-    /* Header */
-    .header {
-        max-width: var(--max-width-header);
-        height: fit-content;
-        padding: var(--header-padding);
-        align-items: flex-start;
-        flex-direction: column;
-        transform: var(--transform-header);
-    }
-    .header .logo-lg {
-        display: none;
-    }   
-    .header .logo-sm {
-        display: block;
-    }  
-    .menu-box {
-        display: block;
-    }
-    .nav {
-        width: fit-content; 
-        height: fit-content;  
-        overflow: hidden;
-        display: none;
-        height: 0;
-        transition: all 0.3s ease-in-out;
-    }
-    .header > .nav > .navlist {
-        height: var(--width-full);
-        width: fit-content;
-        padding-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-lg);
-    }
-    .nav.show-navlist {
-        height: fit-content;
-        display: block;
     }
 
     /* main */

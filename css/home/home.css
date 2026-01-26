@@ -2,10 +2,6 @@
    CSS VARIABLES
    =================================== */
 
-/* Color Palette */
-
-
-
 /* Layout Dimensions */
 :root {
     --height-icon: 30px;
@@ -92,66 +88,7 @@
     --max-width-content: 740px;
     --max-width-service-text: 540px;
     --max-height-purple: 751px;
-    --max-height-footer: 579px;
 }
-
-/* ===================================
-   HEADER
-   =================================== */
-
-.header {
-    background-color: var(--color-background);
-    height: var(--header-height);    
-    max-width: var(--max-width-header);
-    padding: var(--header-padding);
-    border-bottom: 1px solid var(--color-divider);
-    left: 0;
-    transform: var(--transform-header);
-    z-index: 100;
-}
-.header .phone-header {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.header .logo-lg {
-    display: block;
-}
-.header .logo-sm {
-    display: none;
-}
-.header > .nav > .navlist {
-    gap: var(--spacing-xl);
-}
-.navlist li {
-    width: var(--width-full);
-}
-.menu-box {
-    height: var(--height-icon);
-    width: var(--height-icon);
-    border-radius: var(--radius-xs);
-    cursor: pointer;
-    display: none;
-}
-.x,
-.menu {
-    height: var(--width-full);
-    width: var(--width-full);
-    border-radius: var(--radius-xs);
-}
-.x {
-    background-color: var(--color-menu-bg);
-    display: none;
-}
-.show-x {
-    display: block;
-}
-.hide-menu {
-    display: none;
-}
-
 
 /* ===================================
    HERO SECTION
@@ -216,16 +153,6 @@
     left: 0;
 }
 
-
-/* ===================================
-   MAIN CONTENT
-   =================================== */
-
-.main {
-    height: fit-content;
-}
-
-
 /* ===================================
    ABOUT SECTION
    =================================== */
@@ -239,21 +166,6 @@
     max-width: var(--max-width-content);
     gap: var(--spacing-md);
 }
-.btn-main {
-    width: fit-content;
-    font-size: var(--fs-cap);
-    font-weight: var(--fw-bold);
-    line-height: var(--lh-lg);
-    background-color: var(--color-background-accent);
-    color: var(--color-text-header-link);
-    padding: var(--btn-main-padding);
-    border-radius: var(--radius-sm);
-    gap: 10px;
-}
-.btn-main span:first-child {
-    padding-bottom: 3px;
-}
-
 
 /* ===================================
    GALLERY
@@ -278,7 +190,6 @@
    =================================== */
 
 .service-description {
-    height: var(--fit-content);
     gap: var(--spacing-xl);
 }
 .service-description p {
@@ -292,7 +203,6 @@
 
 .section-service-list {
     list-style-type: decimal;
-    height: var(--fit-content);
     padding: var(--section-service-list-padding);
     gap: var(--spacing-xl);
 }
@@ -325,16 +235,6 @@
     width: var(--width-full);
     border-radius: var(--radius-lg);
 }
-.purple-desktop {
-    display: block;
-}
-.purple-tablet {
-    display: none;
-}
-.purple-mobile {
-    display: none;
-}
-
 
 /* ===================================
    CALL-TO-ACTION SECTION
@@ -348,60 +248,6 @@
 .section-cta > .section-content {
     max-width: var(--max-width-content);
     gap: var(--spacing-md);
-}
-
-
-
-/* ===================================
-   FOOTER
-   =================================== */
-
-
-/* ===================================
-   RESPONSIVE DESIGN - TABLET
-   =================================== */
-
-@media (max-width: 1200px) and (min-width: 992px) {
-    .gallery {
-        justify-content: start;
-    }
-
-    .logo-desktop {
-        display: none;
-    }
-    .logo-tablet {
-        display: block;
-    }
-    .logo-mobile {
-        display: none;
-    }
-    .image-desktop {
-        display: none;
-    }
-    .image-tablet {
-        display: block;
-    }
-    .image-mobile {
-        display: none;
-    }
-
-    .purple-desktop {
-        display: none;
-    }
-    .purple-tablet {
-        display: block;
-    }
-    .purple-mobile {
-        display: none;
-    }
-
-    .footer .footer-content {
-        background: linear-gradient(to top, hsl(56, 88%, 16%), transparent), url(../../images/home/footer/2.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-clip: padding-box;
-    }
 }
 
 
@@ -424,39 +270,6 @@
         --section-cta-padding-left: var(--spacing-xl);
     }
 
-    .header {
-        height: auto;
-        min-height: var(--header-height);
-        padding: var(--header-padding);
-        gap: 0px;
-    }
-    .header .logo-lg {
-        display: none;
-    }   
-    .header .logo-sm {
-        display: block;
-    }  
-    .menu-box {
-        display: block;
-    }
-    .nav {
-        width: fit-content; 
-        height: 0;
-        overflow: hidden;
-        display: none;
-        transition: all 0.3s ease-in-out;
-    }
-    .header > .nav > .navlist {
-        width: fit-content;
-        padding-bottom: var(--spacing-3xl);
-        gap: var(--spacing-xl);
-    }
-    /* toggle */
-    .nav.show-navlist {
-        height: fit-content !important;
-        display: block !important;
-    }
-
     .hero {
         margin-top: 70px;
     }
@@ -470,32 +283,4 @@
         max-width: 200px;
     }
 
-    .logo-desktop {
-        display: none;
-    }
-    .logo-tablet {
-        display: none;
-    }
-    .logo-mobile {
-        display: block;
-    }
-    .image-desktop {
-        display: none;
-    }
-    .image-tablet {
-        display: none;
-    }
-    .image-mobile {
-        display: block;
-    }
-
-    .purple-desktop {
-        display: none;
-    }
-    .purple-tablet {
-        display: none;
-    }
-    .purple-mobile {
-        display: block;
-    } 
 }
