@@ -1,0 +1,369 @@
+/* ===================================
+   CSS VARIABLES
+   =================================== */
+
+
+/* Layout Dimensions */
+:root {
+    --container-width-tablet: 760px;
+    --container-width-mobile: 343px;
+}
+
+/* Spacing & Padding */
+:root {
+    /* Common Spacing Values */
+    --spacing-xs: 16px;
+    --spacing-sm: 20px;
+    --spacing-md: 30px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    --spacing-2xl: 80px;
+    --spacing-3xl: 100px;
+    --spacing-4xl: 150px;
+    
+    /* Body Padding */
+    --body-padding-left: var(--spacing-lg);
+    --body-padding-right: var(--body-padding-left);
+    --body-padding: 0 var(--body-padding-right) 0 var(--body-padding-left);
+    
+    /* Hero Section */
+    --hero-padding-top: 126px;
+    --hero-padding-bottom: var(--spacing-2xl);
+    --hero-padding: var(--hero-padding-top) 0 var(--hero-padding-bottom);
+
+    /* main */
+    --main-padding-bottom: var(--spacing-3xl);
+    --main-padding: 0 0 var(--main-padding-bottom);
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+
+.header {
+    background-color: var(--color-background);
+    height: var(--header-height);    
+    max-width: var(--max-width-header);
+    border-bottom: 1px solid var(--color-divider);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: var(--transform-header);
+    z-index: 100;
+}
+.header .phone-header {
+    height: var(--width-full);
+    width: var(--width-full);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo-lg {
+    display: block;
+}
+.header .logo-sm {
+    display: none;
+}
+.header > .nav > .navlist {
+    height: var(--width-full);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+.navlist li {
+    width: 100%;
+}
+.menu-box {
+    height: var(--height-icon);
+    width: var(--height-icon);
+    background-color: transparent;
+    border-radius: var(--radius-xs);
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.x,
+.menu {
+    height: var(--width-full);
+    width: var(--width-full);
+    border-radius: var(--radius-xs);
+}
+.x {
+    background-color: hsl(0, 0%, 97%);
+    display: none;
+}
+.show-x {
+    display: block;
+}
+.hide-menu {
+    display: none;
+}
+
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+.hero {
+    padding: var(--hero-padding);
+}
+.hero .h1 {
+    margin: 0;
+}
+
+/* ===================================
+   MAIN
+   =================================== */
+
+.main {
+    /* dimensions */
+    height: fit-content;
+    width: var(--width-full);
+    /* padding */
+    padding: var(--main-padding);
+    /* flex */
+    display: flex;
+}
+.main h2 {
+    width: 152px;
+}
+.main > .content {
+    /* dimensions */
+    width: calc( 100% - 152px );
+    height: fit-content;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: calc( var(--spacing-2xl) - 10px );
+
+}
+
+/* ===================================
+   OWNER SECTION
+   =================================== */
+.owner-section {
+    height: 500px;
+    width: 564px;
+    /* flex */
+    display: flex;
+    gap: var(--spacing-sm);
+}
+.owner-section img {
+    height: 100%;
+    width: 446px;
+}
+.owner-section .info p {
+    text-transform: uppercase;
+    color: var(--color-text-p);
+}
+.owner-section .info .h4 {
+    color: var(--color-text-cap);
+}
+
+/* ===================================
+   PHOTOS
+   =================================== */
+.main .photos {
+    /* dimensions */
+    width: var(--width-full);
+    /* grid */
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 400px;
+}
+
+/* ===================================
+BRAND HISTORY
+=================================== */
+.owner-history,
+.brand-history {
+    width: 600px;
+    column-rule: var(--color-text-p);
+}
+.img-full-size {
+    width: var(--width-full);
+    height: 400px;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer {
+    max-height: 579px;
+    padding: var(--footer-padding);
+}
+.footer .footer-content {
+    height: 100%;
+    width: 100%;
+    padding: var(--footer-content-padding);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: linear-gradient(to top, hsl(56, 88%, 16%), transparent), url(../../images/about/footer/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-clip: padding-box;
+}
+.footer .footer-content > .footer-info {
+    color: var(--color-text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.footer > .footer-content > .footer-info > p {
+    font-size: 117px;
+    font-weight: var(--fw-regular);
+    font-family: 'Caprasimo', sans-serif;
+    line-height: var(--lh-tight);
+    text-align: center;
+    color: var(--color-text-white);
+}
+.footer > .footer-content > .footer-info > div {
+    width: var(--width-full);
+    display: flex;
+    justify-content: space-between;
+}
+.footer > .footer-content > .footer-info > div * {
+    color: var(--color-text-white);
+}
+
+/* ===================================
+   TABLET
+   =================================== */
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    :root {
+        --body-padding-left: var(--spacing-sm);
+        --container-width: var(--container-width-tablet);
+    }
+
+    /* ===================================
+    OWNER SECTION
+    =================================== */
+    .owner-section {
+        height: 354px;
+        width: 430px;
+    }
+    .owner-section img {
+        width: 315px;
+    }
+
+
+    /* ===================================
+    PHOTOS
+    =================================== */
+    .main .photos {
+        grid-template-rows: 226px;
+    }
+
+    /* ===================================
+    BRAND HISTORY
+    =================================== */
+    .owner-history,
+    .brand-history {
+        width: var(--width-full);
+    }
+ 
+    
+    /* ===================================
+    FOOTER
+    =================================== */
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* body */
+        --body-padding-left: var(--spacing-xs);
+        /* header */
+        --header-padding: var(--spacing-sm) var(--spacing-xs);
+        --hero-padding-bottom: 56px;
+        --container-width: var(--container-width-mobile);
+        --footer-padding-left: var(--spacing-xs);
+        --footer-padding-right: var(--spacing-xs);
+    }
+
+    /* Header */
+    .header {
+        height: fit-content;
+        padding: var(--header-padding);
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .header .logo-lg {
+        display: none;
+    }   
+    .header .logo-sm {
+        display: block;
+    }  
+    .menu-box {
+        display: block;
+    }
+    .nav {
+        width: fit-content; 
+        height: fit-content;  
+        overflow: hidden;
+        display: none;
+        height: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .header > .nav > .navlist {
+        height: var(--width-full);
+        width: fit-content;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    .nav.show-navlist {
+        height: fit-content;
+        display: block;
+    }
+
+
+    /* ===================================
+    OWNER SECTION
+    =================================== */
+    .main {
+        flex-direction: column;
+        gap: calc( var(--spacing-lg) + 10px );
+    }
+
+    .main > .content {
+        width: var(--width-full);
+    }
+
+    /* ===================================
+    OWNER SECTION
+    =================================== */
+    .owner-section {
+        height: 447px;
+        width: var(--width-full);
+        /* flex */
+        flex-direction: column;
+    }
+    .owner-section img {
+        width: var(--width-full);
+    }
+
+    /* ===================================
+        PHOTOS
+    =================================== */
+    .main .photos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 400px);
+    }
+
+    /* ===================================
+    BRAND HISTORY
+    =================================== */
+    .owner-history,
+    .brand-history {
+        width: var(--width-full);
+    }
+
+
+}
