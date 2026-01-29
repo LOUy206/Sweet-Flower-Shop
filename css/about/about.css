@@ -42,22 +42,13 @@
 .hero {
     padding: var(--hero-padding);
 }
-.hero .h1 {
-    margin: 0;
-}
 
 /* ===================================
    MAIN
    =================================== */
 
 .main {
-    /* dimensions */
-    height: fit-content;
-    width: var(--width-full);
-    /* padding */
     padding: var(--main-padding);
-    /* flex */
-    display: flex;
 }
 .main h2 {
     width: 152px;
@@ -65,10 +56,6 @@
 .main > .content {
     /* dimensions */
     width: calc( 100% - 152px );
-    height: fit-content;
-    /* flex */
-    display: flex;
-    flex-direction: column;
     gap: calc( var(--spacing-2xl) - 10px );
 
 }
@@ -79,8 +66,6 @@
 .owner-section {
     height: 500px;
     width: 564px;
-    /* flex */
-    display: flex;
     gap: var(--spacing-sm);
 }
 .owner-section img {
@@ -88,7 +73,6 @@
     width: 446px;
 }
 .owner-section .info p {
-    text-transform: uppercase;
     color: var(--color-text-p);
 }
 .owner-section .info .h4 {
@@ -99,25 +83,22 @@
    PHOTOS
    =================================== */
 .main .photos {
-    /* dimensions */
-    width: var(--width-full);
-    /* grid */
-    display: grid;
     gap: var(--spacing-sm);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 400px;
+}
+.main .photos img {
+    width: calc( (100% - var(--spacing-sm)*2) /3 );
+    height: 400px;
 }
 
 /* ===================================
-BRAND HISTORY
-=================================== */
+   BRAND HISTORY
+   =================================== */
 .owner-history,
 .brand-history {
     width: 600px;
-    column-rule: var(--color-text-p);
+    color: var(--color-text-p);
 }
 .img-full-size {
-    width: var(--width-full);
     height: 400px;
 }
 
@@ -132,8 +113,8 @@ BRAND HISTORY
     }
 
     /* ===================================
-    OWNER SECTION
-    =================================== */
+       OWNER SECTION
+       =================================== */
     .owner-section {
         height: 354px;
         width: 430px;
@@ -144,15 +125,15 @@ BRAND HISTORY
 
 
     /* ===================================
-    PHOTOS
-    =================================== */
-    .main .photos {
-        grid-template-rows: 226px;
+       PHOTOS
+       =================================== */
+    .main .photos img {
+        height: 226px;
     }
 
     /* ===================================
-    BRAND HISTORY
-    =================================== */
+       BRAND HISTORY
+       =================================== */
     .owner-history,
     .brand-history {
         width: var(--width-full);
@@ -161,15 +142,13 @@ BRAND HISTORY
 
 @media (max-width: 768px) {
     :root {
-        /* body */
         --body-padding-left: var(--spacing-xs);
     }
 
     /* ===================================
-    OWNER SECTION
-    =================================== */
+       OWNER SECTION
+       =================================== */
     .main {
-        flex-direction: column;
         gap: calc( var(--spacing-lg) + 10px );
     }
 
@@ -178,13 +157,11 @@ BRAND HISTORY
     }
 
     /* ===================================
-    OWNER SECTION
-    =================================== */
+       OWNER SECTION
+       =================================== */
     .owner-section {
         height: 447px;
         width: var(--width-full);
-        /* flex */
-        flex-direction: column;
     }
     .owner-section img {
         width: var(--width-full);
@@ -193,18 +170,17 @@ BRAND HISTORY
     /* ===================================
         PHOTOS
     =================================== */
-    .main .photos {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 400px);
+    .main .photos img {
+        width: 100%;
+        height: 400px;
     }
 
     /* ===================================
-    BRAND HISTORY
-    =================================== */
+       BRAND HISTORY
+       =================================== */
     .owner-history,
     .brand-history {
         width: var(--width-full);
     }
-
 
 }
