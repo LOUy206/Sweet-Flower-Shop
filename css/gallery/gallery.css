@@ -71,10 +71,10 @@
    =================================== */
 
 .main {
-    height: var(--fit-content);
+    /* height: var(--fit-content);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 main > .section {
     height: var(--fit-content);
@@ -88,41 +88,24 @@ main > .section {
 
 .section-gallery {
     padding: var(--gallery-padding);
-    display: flex;
 }
 .section-gallery > h2 {
-    height: fit-content;
     width: 150px;
 }
 .section-gallery .content {
-    height: fit-content;
-    width: calc(100% - 150px);
-    display: grid;
-    row-gap: 60px;
-    column-gap: 20px;
-    grid-template-columns: repeat(auto-fit, calc((100% - 40px) / 3));
     grid-template-rows: repeat(3, 360px);
 }
-.section-gallery .content > article {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.section-gallery .content .row {
+    row-gap: 60px;
 }
-.section-gallery .content > article figcaption {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-.section-gallery .content > article figcaption .label {
+.section-gallery .content article figcaption .label {
     color: var(--color-text-p);
-    text-transform: uppercase;
 }
-.section-gallery .content > article figcaption .price {
+.section-gallery .content article figcaption .price {
     color: var(--color-text-cap);
 }
-.section-gallery .content > article img {
+.section-gallery .content article img {
     height: 318px;
-    width: var(--width-full);
     border-radius: var(--radius-lg);
 }
 
@@ -131,39 +114,28 @@ main > .section {
    SERVICES SECTION
    =================================== */
 .section-services {
-    height: var(--fit-content);
     padding: var(--services-padding);
-    display: flex;
 }
 .section-services h2 {
     color: var(--color-text-p);
     width: 203px;
 }
 .section-services > .content {
-    height: fit-content;
     width: calc(100% - 203px);
-    display: flex;
-    flex-direction: column;
     gap: 40px;
 }
 .content .service {
     padding: var(--service-padding);
     border-top: 1px solid var(--color-divider);
-    display: flex;
     gap: 20px;
 }
 .service .description {
     width: calc((100% - 20px) / 2);
-    height: fit-content;
     color: var(--color-text-p);
-    display: flex;
-    flex-direction: column;
     gap: 24px;
 }
 .service .description h3 {
     font-size: var(--fs-h1);
-    text-transform: uppercase;
-    line-height: 1;
 }
 .service img {
     height: 421px;
@@ -177,18 +149,11 @@ main > .section {
    =================================== */
 
 .section-cta {
-    height: var(--fit-content);
     padding: var(--section-cta-padding);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 40px;
 }
 .section-cta > .section-content {
     max-width: 400px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -206,34 +171,24 @@ main > .section {
     /* Main */
     .main {
         width: var(--container-width);
-        margin: 0 auto;
     }
 
     /* Hero section */
     .hero {
         width: var(--container-width);
-        margin: 0 auto;
     }
 
     /* Gallery section */
     .section-gallery {
-        flex-direction: column;
-        align-items: center;
         gap: var(--spacing-lg);
     }
     .section-gallery h2 {
-        width: var(--width-full);
-    }
-    .section-gallery .content {
-        grid-template-columns: repeat(auto-fit, calc((100% - 20px) / 2));
         width: var(--width-full);
     }
 
     /* Services section */
     .section-services {
         width: var(--container-width);
-        flex-direction: column;
-        align-items: center;
         gap: var(--spacing-lg);
     }
     .section-services h2 {
@@ -262,38 +217,28 @@ main > .section {
         --container-width: var(--container-width-mobile);
     }
 
-    /* main */
-    .main {
-        width: var(--container-width);
-        margin: 0 auto;
-    }
-
     /* hero */
     .hero {
         width: var(--container-width);
         margin: 0 auto;
     }
+
+    /* main */
+    .main {
+        width: var(--container-width);
+    }
     
     /* gallery section */
     .section-gallery {
-        flex-direction: column;
-        align-items: center;
         gap: var(--spacing-lg);
     }
     .section-gallery h2 {
         width: var(--width-full);
     }
-    .section-gallery .content {
-        width: var(--width-full);
-        grid-template-columns: var(--width-full);
-        gap: var(--spacing-sm);
-    }
 
     /* services section */
     .section-services {
         width: var(--container-width);
-        flex-direction: column;
-        align-items: center;
     }
     .section-services h2 {
         width: var(--width-full);
@@ -303,7 +248,6 @@ main > .section {
     }
     .content .service {
         width: var(--width-full);
-        flex-direction: column;
     }
     .content .service .description h3 {
         font-size: var(--fs-h2);
